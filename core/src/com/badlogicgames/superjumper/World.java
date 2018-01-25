@@ -38,7 +38,7 @@ public class World {
 	public static final int WORLD_STATE_RUNNING = 0;
 	public static final int WORLD_STATE_NEXT_LEVEL = 1;
 	public static final int WORLD_STATE_GAME_OVER = 2;
-	public static final Vector2 gravity = new Vector2(0, -12);
+	public static final Vector2 gravity = new Vector2(0, -8);
 
 	public final Bob bob;
 	public final List<Platform> platforms;
@@ -54,7 +54,7 @@ public class World {
 	public int state;
 
 	public World (WorldListener listener) {
-		this.bob = new Bob(5, 1);
+		this.bob = new Bob(8, 3);
 		this.platforms = new ArrayList<Platform>();
 		this.springs = new ArrayList<Spring>();
 		this.squirrels = new ArrayList<Squirrel>();
