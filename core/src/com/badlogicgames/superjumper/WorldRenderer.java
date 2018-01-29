@@ -17,6 +17,7 @@
 package com.badlogicgames.superjumper;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
@@ -55,7 +56,8 @@ public class WorldRenderer {
 		batch.begin();
 		renderBob();
 		renderPlatforms();
-		renderItems();
+		renderCars();
+		//renderItems();
 		renderSquirrels();
 		renderCastle();
 		batch.end();
@@ -92,6 +94,19 @@ public class WorldRenderer {
 			}
 
 			batch.draw(keyFrame, platform.position.x - 1, platform.position.y - 0.25f, 2, 0.5f);
+		}
+	}
+
+	private void renderCars () {
+		int len = world.cars.size();
+		for (int i = 0; i < len; i++) {
+			Car car = world.cars.get(i);
+			Texture keyFrame = Assets.car;
+			if (car.state == Car.CAR_STATE_PULVERIZING) {
+				keyFrame = Assets.car;
+			}
+
+			batch.draw(keyFrame, car.position.x - 1, car.position.y - 0.25f, 1, 2);
 		}
 	}
 

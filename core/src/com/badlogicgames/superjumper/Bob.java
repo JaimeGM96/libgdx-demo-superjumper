@@ -67,8 +67,8 @@ public class Bob extends DynamicGameObject {
 	}
 
 	public void hitPlatform () {
-		velocity.y = BOB_JUMP_VELOCITY;
-		state = BOB_STATE_JUMP;
+		velocity.set(0, 0);
+		state = BOB_STATE_HIT;
 		stateTime = 0;
 	}
 

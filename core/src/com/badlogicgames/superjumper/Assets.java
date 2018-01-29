@@ -48,6 +48,7 @@ public class Assets {
 	public static TextureRegion platform;
 	public static Animation brakingPlatform;
 	public static BitmapFont font;
+	public static Texture car;
 
 	public static Music music;
 	public static Sound jumpSound;
@@ -75,6 +76,7 @@ public class Assets {
 		soundOn = new TextureRegion(items, 64, 0, 64, 64);
 		arrow = new TextureRegion(items, 0, 64, 64, 64);
 		pause = new TextureRegion(items, 64, 64, 64, 64);
+		car = loadTexture("data/car_blue_3.png");
 
 		spring = new TextureRegion(items, 128, 0, 32, 32);
 		castle = new TextureRegion(items, 128, 64, 64, 64);
